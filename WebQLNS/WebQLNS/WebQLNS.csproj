@@ -86,12 +86,16 @@
     <Content Include="Global.asax" />
     <Content Include="qlNhanVien.aspx" />
     <Content Include="qlPhongBan.aspx" />
+    <Content Include="qlTheLoai.aspx" />
+    <Content Include="qlTinTuc.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ThemBanTin.aspx" />
+    <Content Include="themNhanVien.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -113,12 +117,40 @@
     <Compile Include="qlPhongBan.aspx.designer.cs">
       <DependentUpon>qlPhongBan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="qlTheLoai.aspx.cs">
+      <DependentUpon>qlTheLoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qlTheLoai.aspx.designer.cs">
+      <DependentUpon>qlTheLoai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qlTinTuc.aspx.cs">
+      <DependentUpon>qlTinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qlTinTuc.aspx.designer.cs">
+      <DependentUpon>qlTinTuc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ThemBanTin.aspx.cs">
+      <DependentUpon>ThemBanTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThemBanTin.aspx.designer.cs">
+      <DependentUpon>ThemBanTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="themNhanVien.aspx.cs">
+      <DependentUpon>themNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="themNhanVien.aspx.designer.cs">
+      <DependentUpon>themNhanVien.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +188,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
