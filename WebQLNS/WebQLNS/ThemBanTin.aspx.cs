@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration; 
+using System.Web.DynamicData;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 

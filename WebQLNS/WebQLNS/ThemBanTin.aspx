@@ -21,7 +21,7 @@
     <div class="row mt-3 mb-2">
         <div class="col-md-2">Nội Dung</div>
         <div class="col-md-10">
-            <asp:TextBox ID="txtNoiDung" runat="server" TextMode="MultiLine" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtNoiDung" runat="server" TextMode="MultiLine" CssClass="ckeditor" Rows="30" ></asp:TextBox>
         </div>
     </div>
     <div class="row mt-3 mb-2">

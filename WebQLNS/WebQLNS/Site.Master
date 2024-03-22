@@ -18,18 +18,21 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <%--<li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="qlNhanVien.aspx">Quản Lý Nhân Viên</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="qlPhongBan.aspx">Quản Lý Phòng ban</a>
-      </li>--%>
-        <li class="nav-item">
-        <a class="nav-link" href="qlTinTuc.aspx">Quản Lý Tin Tức</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="qlTheLoai.aspx">Quản Lý Thể Loại</a>
-      </li>
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+            Quản Lý tin Tức
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="qlTinTuc.aspx">Bản Tin</a></li>
+            <li><a class="dropdown-item" href="qlTheLoai.aspx">Thể Loại</a></li>
+          </ul>
+        </li>
     </ul>
     
   </div>
@@ -44,5 +47,7 @@
                 </marquee>
         </div>
     </form>
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
 </body>
 </html>

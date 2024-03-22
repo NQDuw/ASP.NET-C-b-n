@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:SqlDataSource ID="dsTheLoai" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:TinTucDBConnectionString %>" 
+        ConnectionString="<%$ ConnectionStrings:QLNhanVienConnectionString %>" 
         DeleteCommand="DELETE FROM [TheLoai] WHERE [Id] = @Id" 
         InsertCommand="INSERT INTO [TheLoai] ([TenTheLoai], [TrangThai]) VALUES (@TenTheLoai, @TrangThai)" 
         SelectCommand="SELECT * FROM [TheLoai]" 
