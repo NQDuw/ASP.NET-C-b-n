@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="WebQLHoaTuoi.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Shop Hoa Tươi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+          <a class="nav-link dropdown-toggle text-light"  href="#" id="navbardrop" data-toggle="dropdown"> Danh mục hoa
+            </a>
+        <div class="dropdown-menu">
+            <asp:Repeater ID="rptLoaiHoa" runat="server" DataSourceID="dsLoai">
+                <ItemTemplate>
+                    <a class="dropdown-item" href="XemHoa.aspx?maloai=<%# Eval("Maloai") %>"><%# Eval("TenLoai") %></a>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="XemHoa.aspx">Xem Hoa<span class="sr-only">(current)</span></a>
+         </li>
+      <li class="nav-item">
+            <a class="nav-link" href="TraCuu.aspx">Tra Cứu</a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="ThemHoa.aspx">Thêm Hoa</a>
+      </li>
+        <li class="nav-item">
+            <a class="nav-link" href="XemGioHang.aspx">Xem Giỏ Hàng</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+        <div style="min-height:500px" class="container">
+            <asp:ContentPlaceHolder ID="Noidung" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:SqlDataSource ID="dsLoai" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:HoaTuoiDBConnectionString %>" 
+        SelectCommand="SELECT * FROM [Loai]"></asp:SqlDataSource>
+         <div class="alert alert-dark">
+            Số Lượng truy cập:<asp:Label ID="lbDemTruyCap" Font-Bold="true" runat="server" ForeColor="DeepPink" 
+                Text="Label"></asp:Label>
+        </div>
+        <div class="bg-dark text-center text-white mb-0">
+            <marquee>
+            Thiết kế Bởi: Nguyễn Quốc Dư - 2221160030 
+                </marquee>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </form>
+</body>
+</html>
